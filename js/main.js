@@ -1,4 +1,4 @@
-// ===== Mobile nav toggle =====
+// Teleponis nav toggle
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".nav-toggle");
   const list = document.querySelector(".nav-list");
@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.addEventListener("click", () => list.classList.toggle("open"));
   }
 
-  // ===== Mark active link =====
+  // Mark aqtiuri linkistvis
   const path = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-list a").forEach((a) => {
     if (a.getAttribute("href") === path) a.classList.add("active");
   });
 
-  // ===== Gallery modal =====
+  // Galeriis modali
   const modal = document.getElementById("modal");
   if (modal) {
     const modalImg = modal.querySelector("img");
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== Back to top =====
+  // Zemot asasvlelad
   const toTop = document.getElementById("toTop");
   if (toTop) {
     window.addEventListener("scroll", () => {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  // ===== Contact form validation =====
+  // Kontaktebi validacia
   const form = document.getElementById("contactForm");
   if (form) {
     const msg = document.getElementById("formMsg");
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Time-of-day greeting on home page
+// Drois mixedvit misalmeba
 (function(){
   const el = document.getElementById("greeting");
   if (!el) return;
