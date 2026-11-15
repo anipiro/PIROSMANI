@@ -1,0 +1,8 @@
+{
+  "name": "pirosmani",
+  "version": "1.0.0",
+  "description": "A tribute website to Niko Pirosmani",
+  "scripts": {
+    "format": "prettier --write \"**/*.js\""
+  }
+}

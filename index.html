@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="nav-inner">
       <a href="index.html" class="brand">Niko<span>·</span>Pirosmani</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <nav>
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
@@ -53,6 +53,20 @@
         </article>
       </div>
     </section>
+
+    <section class="container">
+      <h2 class="section-title">Painting of the day</h2>
+      <p class="section-sub">A different work from the gallery every day.</p>
+      <div id="daily" class="daily" hidden>
+        <img src="" alt="" />
+        <div>
+          <h3></h3>
+          <p class="daily-details"></p>
+          <p class="daily-about"></p>
+          <a href="gallery.html">See it in the gallery</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <button id="toTop" aria-label="Back to top">↑</button>
@@ -61,6 +75,6 @@
     <p>© 2026 · A tribute site to Niko Pirosmani</p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
