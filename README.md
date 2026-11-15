@@ -10,10 +10,10 @@ This site is designed as a lightweight front-end project with no build step and 
 
 Main sections:
 
-- Home page with a hero section and introduction
+- Home page with a hero section, introduction and a painting of the day
 - Biography page with a short life story and timeline
-- Gallery page with a modal image viewer
-- Style page covering Pirosmani's visual technique
+- Gallery page with filters, search, sorting and a modal image viewer
+- Style page covering Pirosmani's visual technique, with a short quiz
 - Contact page with basic form validation
 
 ## Features
@@ -23,8 +23,13 @@ Main sections:
 - Active navigation link highlighting
 - Time-based greeting on the home page
 - Scroll-to-top button
-- Gallery modal for enlarged artwork previews
-- Contact form validation in vanilla JavaScript
+- Gallery built from `data/paintings.json` with `fetch` and `async/await`
+- Filter by subject, search by title and sort A–Z / Z–A
+- Gallery modal with previous/next buttons and arrow-key navigation
+- Painting of the day on the home page
+- Quiz on the style page written as a class with private fields
+- Contact form that checks each field on blur and input, with a character counter
+- Code split into ES modules
 - Shared visual system through a single stylesheet
 
 ## Tech Stack
@@ -66,11 +71,9 @@ PIROSMANI-main/
 
 Because this is a static site, you can run it locally in either of these ways:
 
-### Option 1: Open directly in the browser
+The JavaScript uses ES modules and `fetch`, so the pages must be served over HTTP. Opening `index.html` straight from the file system will not load the scripts.
 
-Open `PIROSMANI-main/index.html` in any modern browser.
-
-### Option 2: Use a local development server
+### Use a local development server
 
 If you use VS Code, a simple option is the Live Server extension. Start the server from the inner `PIROSMANI-main` folder and open the generated local URL.
 
@@ -91,7 +94,24 @@ Then visit `http://localhost:8000`.
 - `PIROSMANI-main/style.html`: explanation of artistic style
 - `PIROSMANI-main/contact.html`: contact form
 - `PIROSMANI-main/css/style.css`: global styling and responsive layout
-- `PIROSMANI-main/js/main.js`: shared interactive behavior
+- `js/main.js`: imports every module and starts it when the page loads
+- `js/nav.js`: mobile menu, active link and back-to-top button
+- `js/painting.js`: `Painting` class and loading the JSON data
+- `js/gallery.js`: building the cards, filters, search and sorting
+- `js/modal.js`: the large image viewer
+- `js/home.js`: greeting and painting of the day
+- `js/form.js`: contact form checks
+- `js/quiz.js`: quiz on the style page
+- `data/paintings.json`: list of paintings
+
+## Formatting
+
+The code is formatted with Prettier using the settings in `.prettierrc`:
+
+```powershell
+npm install --save-dev prettier
+npm run format
+```
 
 ## Behavior Implemented in JavaScript
 

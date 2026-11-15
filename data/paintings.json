@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Actress Margarita",
+    "image": "images/margarita.jpg",
+    "category": "portraits",
+    "details": "1909, oil on oilcloth",
+    "about": "Said to show Marguerite, the French actress from the story of the million roses."
+  },
+  {
+    "title": "Giraffe",
+    "image": "images/giraffe.jpg",
+    "category": "animals",
+    "details": "Oil on oilcloth, undated",
+    "about": "A single animal set against the dark ground, quiet and monumental."
+  },
+  {
+    "title": "Lion",
+    "image": "images/lion.jpg",
+    "category": "animals",
+    "details": "Oil on oilcloth, undated",
+    "about": "A calm, almost heraldic lion, its body laid flat against the night of the oilcloth."
+  },
+  {
+    "title": "Roe Deer",
+    "image": "images/deer.jpg",
+    "category": "animals",
+    "details": "Oil on oilcloth, undated",
+    "about": "A small deer alone in a dark landscape, one of his many solitary animals."
+  },
+  {
+    "title": "Mother and Son",
+    "image": "images/mother.jpg",
+    "category": "portraits",
+    "details": "Oil on oilcloth",
+    "about": "A village mother and child, painted frontally with the stillness of an icon."
+  },
+  {
+    "title": "Donkey Bridge",
+    "image": "images/donkey.jpg",
+    "category": "everyday",
+    "details": "State Museum of Fine Arts, Tbilisi",
+    "about": "Ordinary traffic on a bridge, turned into a long and solemn frieze."
+  },
+  {
+    "title": "Celebration",
+    "image": "images/feast.jpg",
+    "category": "everyday",
+    "details": "Oil on oilcloth",
+    "about": "An open-air feast, the kind of scene he painted for the walls of taverns."
+  },
+  {
+    "title": "Ortachali Beauty",
+    "image": "images/ortachali.jpg",
+    "category": "portraits",
+    "details": "Oil on oilcloth",
+    "about": "A woman from Ortachali, the garden district of old Tiflis known for its revelry."
+  }
+]

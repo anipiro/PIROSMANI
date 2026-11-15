@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="nav-inner">
       <a href="index.html" class="brand">Niko<span>·</span>Pirosmani</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <nav>
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
@@ -27,47 +27,34 @@
   <main>
     <section class="container fade-in">
       <h2 class="section-title">Masterpieces on Oilcloth</h2>
-      <p class="section-sub">Painted on black oilcloth and tavern signboards. Click any work to view it larger.</p>
+      <p class="section-sub">Painted on black oilcloth and tavern signboards. Click any work to view it larger, then use the arrow keys to move between paintings.</p>
 
-      <div class="gallery-grid">
-        <article class="card">
-          <img src="images/margarita.jpg" alt="Actress Margarita by Niko Pirosmani" loading="lazy" />
-          <div class="card-body"><h3>Actress Margarita</h3><p>1909 · oil on oilcloth</p></div>
-        </article>
-        <article class="card">
-          <img src="images/giraffe.jpg" alt="Giraffe by Niko Pirosmani" loading="lazy" />
-          <div class="card-body"><h3>Giraffe</h3><p>Oil on oilcloth · undated</p></div>
-        </article>
-        <article class="card">
-          <img src="images/lion.jpg" alt="Lion by Niko Pirosmani" loading="lazy" />
-          <div class="card-body"><h3>Lion</h3><p>Oil on oilcloth · undated</p></div>
-        </article>
-        <article class="card">
-          <img src="images/deer.jpg" alt="Roe Deer by Niko Pirosmani" loading="lazy" />
-          <div class="card-body"><h3>Roe Deer</h3><p>Oil on oilcloth · undated</p></div>
-        </article>
-        <article class="card">
-          <img src="images/mother.jpg" alt="Mother and Son by Niko Pirosmani" loading="lazy" />
-          <div class="card-body"><h3>Mother and Son</h3><p>Oil on oilcloth</p></div>
-        </article>
-        <article class="card">
-          <img src="images/donkey.jpg" alt="Donkey Bridge by Niko Pirosmani" loading="lazy" />
-          <div class="card-body"><h3>Donkey Bridge</h3><p>State Museum of Fine Arts, Tbilisi</p></div>
-        </article>
-        <article class="card">
-          <img src="images/feast.jpg" alt="Celebration by Niko Pirosmani" loading="lazy" />
-          <div class="card-body"><h3>Celebration</h3><p>Oil on oilcloth</p></div>
-        </article>
-        <article class="card">
-          <img src="images/ortachali.jpg" alt="Ortachali Beauty by Niko Pirosmani" loading="lazy" />
-          <div class="card-body"><h3>Ortachali Beauty</h3><p>Oil on oilcloth</p></div>
-        </article>
+      <div class="gallery-tools">
+        <div class="filters" role="group" aria-label="Filter by subject">
+          <button type="button" class="filter active" data-category="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-category="animals" aria-pressed="false">Animals</button>
+          <button type="button" class="filter" data-category="portraits" aria-pressed="false">Portraits</button>
+          <button type="button" class="filter" data-category="everyday" aria-pressed="false">Everyday life</button>
+        </div>
+        <div class="search-sort">
+          <input type="search" id="search" placeholder="Search by title" aria-label="Search by title" />
+          <select id="sort" aria-label="Sort paintings">
+            <option value="default">Museum order</option>
+            <option value="az">Title A–Z</option>
+            <option value="za">Title Z–A</option>
+          </select>
+        </div>
       </div>
+      <p id="count" class="count" aria-live="polite"></p>
+
+      <div class="gallery-grid"></div>
     </section>
   </main>
 
   <div id="modal" class="modal" role="dialog" aria-modal="true">
     <button class="modal-close" aria-label="Close">×</button>
+    <button class="modal-prev" aria-label="Previous painting">‹</button>
+    <button class="modal-next" aria-label="Next painting">›</button>
     <div>
       <img src="" alt="" />
       <p class="modal-caption"></p>
@@ -80,6 +67,6 @@
     <p>© 2026 · Images: public domain · Wikimedia Commons</p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
